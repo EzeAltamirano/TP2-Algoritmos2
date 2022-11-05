@@ -1,18 +1,18 @@
 #include "Cell.h"
 
-Cell::Cell( CellState newState)
+Cell::Cell( State newState)
 {
     this->state = newState;
 }
 
 Cell::~Cell(){}
 
-void Cell::setState( CellState newState )
+void Cell::setState( State newState )
 {
     this->state = newState;
 }
 
-CellState Cell::getState()
+Cell::State Cell::getState()
 {
     return this->state;
 }

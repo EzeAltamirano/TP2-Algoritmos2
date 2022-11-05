@@ -1,41 +1,29 @@
 #ifndef CELL_H
 #define CELL_H
-
-enum CellState {
-    DEAD,
-	DYING,
-    ALIVE,
-	NEWBORN,
-};
-
 class Cell
 {
-	private:
-		//Cell**** neighbours;
-		// Comportamiento c;
-		// Coleccion<Cell> vecinos;
-		// Coleccion<Genes> genes;
-		CellState state;
-		
+private:
+	enum State {
+		ALIVE = 0,
+		DEATH = 1,
+		WILL_BORN = 2,
+		WILL_DIE = 3
+	};
+	State state;
+	/*
+	CellBehaviour behaviour;
+	Gen genA;
+	Gen genB;
+	Gen genC;
+	*/
+public:
+	Cell(State newState);
+	~Cell();
+	void setState( State newState );
+	State getState();
+	bool isAlive();
+};	
+
+#endif
 
 
-		// clase genes que almacene los genes y sepa como generar nuevos apartir de las celulas madre
-
-
-		// comportamientos obligatorios portal, radioactiva. 
-		// comportamientos a definir, ejemplo: envenenada, contaminada, procxreadora
-		// podemos definirlo como una clase comportamiento con subclases por cada comportamiento
-		// ver patron strategy
-		
-
-		
-
-	public:
-		Cell(CellState newState);
-		~Cell();
-		void setState( CellState newState );
-		CellState getState();
-		bool isAlive();
-};
-
-#endif 
