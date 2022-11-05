@@ -2,19 +2,29 @@
     "tasks": [
         {
             "type": "cppbuild",
-            "label": "Compile TP2",
-            "command": "C:\\msys64\\mingw64\\bin\\g++.exe",
+            "label": "Compilar archivo activo en Mac",
+            "command": "/usr/bin/g++",
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
                 "-Wall",
-                "${fileDirname}\\*.cpp",
+                "${fileDirname}/*.cpp",
                 "-o",
-                "${fileDirname}\\TP2.exe"
+                "${fileDirname}/TP2.out"
             ],
-            "options": {
-                "cwd": "${fileDirname}"
+            "windows": {
+                "command": "C:\\msys64\\mingw64\\bin\\g++.exe",
+                "args": [
+                    "-fdiagnostics-color=always",
+                    "-g",
+                    "-Wall",
+                    "${fileDirname}\\*.cpp",
+                    "-o",
+                    "${fileDirname}\\TP2.exe"
+                ],
+            
             },
+
             "problemMatcher": [
                 "$gcc"
             ],
@@ -22,7 +32,7 @@
                 "kind": "build",
                 "isDefault": true
             },
-            "detail": "Build TP2.exe."
+            "detail": "Build TP2 "
         }
     ],
     "version": "2.0.0"
