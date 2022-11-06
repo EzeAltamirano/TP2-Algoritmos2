@@ -1,14 +1,16 @@
 #ifndef CELL_H
 #define CELL_H
+
+enum State {
+	ALIVE = 0,
+	DEAD = 1,
+	WILL_BORN = 2,
+	WILL_DIE = 3
+};
+
 class Cell
 {
 private:
-	enum State {
-		ALIVE = 0,
-		DEATH = 1,
-		WILL_BORN = 2,
-		WILL_DIE = 3
-	};
 	State state;
 	/*
 	CellBehaviour behaviour;
@@ -17,6 +19,7 @@ private:
 	Gen genC;
 	*/
 public:
+	Cell() {state = ALIVE;}
 	Cell(State newState);
 	~Cell();
 	void setState( State newState );

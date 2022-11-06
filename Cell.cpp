@@ -12,7 +12,7 @@ void Cell::setState( State newState )
     this->state = newState;
 }
 
-Cell::State Cell::getState()
+State Cell::getState()
 {
     return this->state;
 }
