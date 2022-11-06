@@ -3,6 +3,7 @@
 #include "Box.h"
 #include <iostream>
 #include "Cell.h"
+#include "bitmap_image.hpp"
 
 using namespace std;
 
